@@ -9,7 +9,7 @@ import combinedReducer from "./Redux/Reducers/CombinedReducer";
 import { configureStore } from "@reduxjs/toolkit";
 
 import reportWebVitals from './reportWebVitals';
-axios.defaults.baseURL = "http://10.129.2.126:8080"
+axios.defaults.baseURL = "https://jio-bp-pricing-ui.vercel.app/"
 const store = configureStore({
   reducer: combinedReducer,
 });
