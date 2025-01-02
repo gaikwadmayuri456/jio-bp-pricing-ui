@@ -120,7 +120,7 @@ const HomePage = () => {
   // Fetch data from the FastAPI backend
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/fuel-data'); // Update with your API URL
+      const response = await axios.get('http://10.129.2.126:8080/fuel-data'); 
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
