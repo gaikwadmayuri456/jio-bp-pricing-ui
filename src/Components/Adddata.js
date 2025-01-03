@@ -13,6 +13,7 @@ const Adddata = () => {
   });
 
   const [loading, setLoading] = useState(true);
+  const [successMessage, setSuccessMessage] = useState(""); // To display success message
 
   // Fetch initial data from the API
   useEffect(() => {
@@ -42,7 +43,8 @@ const Adddata = () => {
     e.preventDefault();
     try {
       await axios.put("/update-fuel-data", formData);
-      alert("Fuel data updated successfully!");
+      setSuccessMessage("Fuel data updated successfully!"); 
+      setTimeout(() => setSuccessMessage(""), 5000); // Clear message after 5 seconds
     } catch (error) {
       console.error("Error updating fuel data:", error);
       alert("Failed to update fuel data.");
@@ -54,71 +56,73 @@ const Adddata = () => {
   }
 
   return (
-    <form className="fuel-form" onSubmit={handleSubmit}>
-      <h2>Update Fuel Data</h2>
-      <div className="form-group">
-        <label>Petrol Stock (KL):</label>
-        <input
-          type="number"
-          name="petrolstock"
-          value={formData.petrolstock}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Petrol Density (Kg/m³):</label>
-        <input
-          type="number"
-          name="petroldensity"
-          value={formData.petroldensity}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Petrol Rate (₹/L):</label>
-        <input
-          type="number"
-          name="petrolrate"
-          value={formData.petrolrate}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Diesel Stock (KL):</label>
-        <input
-          type="number"
-          name="dieselstock"
-          value={formData.dieselstock}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Diesel Density (Kg/m³):</label>
-        <input
-          type="number"
-          name="dieseldensity"
-          value={formData.dieseldensity}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Diesel Rate (₹/L):</label>
-        <input
-          type="number"
-          name="dieselrate"
-          value={formData.dieselrate}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button type="submit">Update Fuel Data</button>
-    </form>
+    <div>
+      <form className="fuel-form" onSubmit={handleSubmit}>
+        <h2>Update Fuel Data</h2>
+        {successMessage && <div className="success-message">{successMessage}</div>}
+        <div className="form-group">
+          <label>Petrol Stock (KL):</label>
+          <input
+            type="number"
+            name="petrolstock"
+            value={formData.petrolstock}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Petrol Density (Kg/m³):</label>
+          <input
+            type="number"
+            name="petroldensity"
+            value={formData.petroldensity}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Petrol Rate (₹/L):</label>
+          <input
+            type="number"
+            name="petrolrate"
+            value={formData.petrolrate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Diesel Stock (KL):</label>
+          <input
+            type="number"
+            name="dieselstock"
+            value={formData.dieselstock}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Diesel Density (Kg/m³):</label>
+          <input
+            type="number"
+            name="dieseldensity"
+            value={formData.dieseldensity}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Diesel Rate (₹/L):</label>
+          <input
+            type="number"
+            name="dieselrate"
+            value={formData.dieselrate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Update Fuel Data</button>
+      </form>
+    </div>
   );
 };
-
 export default Adddata;
