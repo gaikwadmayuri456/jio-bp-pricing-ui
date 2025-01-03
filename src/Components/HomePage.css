@@ -158,7 +158,7 @@
 .pricing-table th {
     background-color: #ffffff;
     font-size: 2rem;
-    border: px solid #ff0000;
+    border: px solid #ffffff;
     
 }
 .highlight {
@@ -173,24 +173,24 @@
     padding: 20px;
     font-size: 1rem;
     color: #333;
-    line-height: 1.5;
+    line-height: 1;
     text-align: center;
     
 }
 .footer p {
     margin: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 20px;
 }
 .footer .emergency {
     /* font-weight: bold; */
     color: #000000;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .footer .contacts {
     margin-top: 10px;
     /* background-color: #308aff; */
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .contacts {
 display: flex;
@@ -209,7 +209,7 @@ width: 60%; /* Adjust the width of each column */
         font-size: 1.5rem;
     }
     .pricing-table th, .pricing-table td {
-        font-size: 5rem;
+        font-size: 1.5rem;
         padding: 8px;
     }
 }
