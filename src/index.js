@@ -7,7 +7,6 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import combinedReducer from "./Redux/Reducers/CombinedReducer";
 import { configureStore } from "@reduxjs/toolkit";
-
 import reportWebVitals from './reportWebVitals';
 axios.defaults.baseURL = "https://icici-bms.energy.smart-iam.com/jio-bp-api/"
 const store = configureStore({

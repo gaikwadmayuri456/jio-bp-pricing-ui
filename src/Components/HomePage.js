@@ -13,7 +13,6 @@ const HomePage = () => {
   });
 
   useEffect(() => {
-    // Fetch data from API
     const fetchFuelData = async () => {
       try {
         const response = await axios.get("fuel-data");

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Adddata.css";
+import "./Configuration.css";
 
-const Adddata = () => {
+const Configuration = () => {
   const [formData, setFormData] = useState({
     petrolstock: "",
     petroldensity: "",
@@ -125,4 +125,4 @@ const Adddata = () => {
     </div>
   );
 };
-export default Adddata;
+export default Configuration;
