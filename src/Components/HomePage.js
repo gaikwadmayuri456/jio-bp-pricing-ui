@@ -4,12 +4,12 @@ import "./HomePage.css";
 
 const HomePage = () => {
   const [fuelData, setFuelData] = useState({
-    petrolstock: 0,
-    petroldensity: 0,
-    petrolrate: 0,
-    dieselstock: 0,
-    dieseldensity: 0,
-    dieselrate: 0,
+    petrolstock: 50,
+    petroldensity: 0.8,
+    petrolrate: 105,
+    dieselstock: 30,
+    dieseldensity: 0.8,
+    dieselrate: 90,
   });
 
   useEffect(() => {
