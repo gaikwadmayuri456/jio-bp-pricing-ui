@@ -14,27 +14,28 @@ body {
     width: 100vh;
     height: 100vw;
     background-color: #ffffff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 20px;
     transform: rotate(90deg);
     transform-origin: center;
-    position: relative;
+    /* position: relative; */
 }
 .header {
-    background-color: #d4f7d4;
+    /* background-color: #d4f7d4; */
     padding: 10px;
-    text-align: center;
+    text-align: right;
     height: 15%;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
+    /* position: relative; */
 }
 .header img {
     height: 100%;
     width: auto;
-    margin-top: 20px;
+    /* position: relative; */
 }
 .pricing-table {
     width: 90%;
@@ -58,47 +59,44 @@ body {
 .pricing-table th {
     background-color: #ffffff;
     font-size: 2rem;
-    border: px solid #ffffff;
+    border: px solid #ff0000;
     
 }
 .highlight {
     background-color: #000;
-    color: rgb(57, 159, 255);
+    color: rgb(255, 0, 0);
     /* padding: 5px 10px; */
     border-radius: 5px;
     font-weight: 700;
     font-size: 2.5rem;
 }
 .footer {
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 1rem;
     color: #333;
-    line-height: 1;
-    text-align: center;
+    line-height: 1.5;
+    text-align: left;
+    
     
 }
 .footer p {
-    margin: 10px 0;
-    font-size: 1rem;
-    margin-top: 10px;
-    line-height: 1rem;
+    /* margin: 10px 0; */
+    font-size: 1.5rem;
+    /* margin-top: 20px; */
+    padding-left: 60px;
 }
 .footer .emergency {
     /* font-weight: bold; */
     color: #000000;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding-left: 60px;
 }
 .footer .contacts {
-    margin-top: 10px;
-    /* background-color: #308aff; */
-    font-size: 1rem;
+    font-size: 1.5rem;
+    
 }
 .contacts {
-display: flex;
-justify-content: space-between;
-/* border-top: 1px solid #000; Adds a line in between */
-padding-top: 10px;
-margin-top: 10px;
+
 color: rgb(6, 6, 170);
 }
 .contact-column {
@@ -110,7 +108,7 @@ width: 60%; /* Adjust the width of each column */
         font-size: 1.5rem;
     }
     .pricing-table th, .pricing-table td {
-        font-size: 1.5rem;
+        font-size: 5rem;
         padding: 8px;
     }
 }
