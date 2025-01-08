@@ -68,11 +68,11 @@ body {
     /* padding: 5px 10px; */
     border-radius: 5px;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 5rem;
 }
 .footer {
     /* padding: 20px; */
-    font-size: 1rem;
+    font-size: 3rem;
     color: #333;
     line-height: 1.5;
     text-align: left;
@@ -81,19 +81,19 @@ body {
 }
 .footer p {
     /* margin: 10px 0; */
-    font-size: 1.5rem;
-    /* margin-top: 20px; */
+    font-size: 2.2rem;
+    margin-top: 0px;
     padding-left: 60px;
 }
 .footer .emergency {
     /* font-weight: bold; */
     color: #000000;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     padding-left: 60px;
 }
 .footer .contacts {
-    font-size: 1.5rem;
-    
+    font-size: 2.2rem;
+    /* margin-top: 1px; */
 }
 .contacts {
 
@@ -105,7 +105,7 @@ width: 60%; /* Adjust the width of each column */
 }
 @media (max-width: 768px) {
     .highlight {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
     }
     .pricing-table th, .pricing-table td {
         font-size: 5rem;

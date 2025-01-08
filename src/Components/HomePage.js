@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./HomePage.css";
+import moment from "moment";
 
 const HomePage = () => {
   const [fuelData, setFuelData] = useState({
@@ -17,8 +18,11 @@ const HomePage = () => {
     pesono: "P/WC/MH/14/5268(P161970)",
     gstnoreliancebp: "27AAHCR2546N2ZV",
     gstvalidity: "31.12.2031",
-    gstnorbml: "27AAKCR8762R127"
+    gstnorbml: "27AAKCR8762R127",
+    updated_date:""
   });
+
+  const current_day = moment().format("DD-MM-YY");
 
   useEffect(() => {
     const fetchFuelData = async () => {
@@ -72,7 +76,7 @@ const HomePage = () => {
       style={{
         position: 'absolute',
         top: '50%',
-        left: '72%',
+        left: '73%',
         transform: 'translate(-50%, -50%)',
         zIndex: 3,
       }}
@@ -84,7 +88,7 @@ const HomePage = () => {
   <table className="pricing-table">
     <thead>
       <tr>
-        <th></th>
+        <th><span>Date:</span>{moment(fuelData.updated_date).format('DD-MM-YYYY')}</th>
         <th
           style={{
             color: '#f4f4f4',
@@ -113,7 +117,7 @@ const HomePage = () => {
     </thead>
     <tbody>
       <tr>
-        <td style={{ fontSize: '2rem' }}>Stock (KL)</td>
+        <td style={{ fontSize: '2.2rem' }}>Stock (KL)</td>
         <td
           style={{
             backgroundColor: '#000',
@@ -139,7 +143,7 @@ const HomePage = () => {
         </td>
       </tr>
       <tr>
-        <td style={{ fontSize: '2rem' }}>
+        <td style={{ fontSize: '2.2rem' }}>
           Density (Kg/m<sup>3</sup>)
         </td>
         <td
@@ -166,7 +170,7 @@ const HomePage = () => {
         </td>
       </tr>
       <tr>
-        <td style={{ fontSize: '2rem' }}>Rate (₹/L)</td>
+        <td style={{ fontSize: '2.2rem' }}>Rate (₹/L)</td>
         <td
           style={{
             backgroundColor: '#000',
@@ -197,12 +201,12 @@ const HomePage = () => {
     <p
       style={{
         backgroundColor: '#53d9db',
-        // padding: '20px 0 20px 60px',
+        padding: '20px 20px 20px 60px',
         color: '#FFFFFF'
         // borderRadius: 10,
       }}
     >
-      <span style={{ fontWeight: 'bold', color: '#FFFFFF' }}>
+      <span style={{fontWeight: 'bold', color: '#FFFFFF'}}>
         Reliance BP Mobility Limited
       </span>
       <br />
@@ -225,7 +229,7 @@ const HomePage = () => {
     </p>
     <div className="contacts">
       <p>
-        <span style={{ color: '#FFFFFF' }}>
+        <span style={{ color: '#000' }}>
           Name and Contact No. Area Manager
         </span>
         <br />
